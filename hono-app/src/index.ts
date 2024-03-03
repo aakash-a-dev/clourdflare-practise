@@ -2,6 +2,7 @@ import { Hono } from 'hono'
 
 const app = new Hono()
 
+// Middleware
 async function authMiddleware(c:any, next:any) {
   if (c.req.header("Authorization")) {
     await next();
